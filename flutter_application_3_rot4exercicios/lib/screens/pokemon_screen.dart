@@ -35,7 +35,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
       setState(() {
         pokemon = result;
         isLoading = false;
-        _controller.text = result.id.toString(); // 🔥 atualiza campo
+        _controller.text = result.id.toString();
       });
     } catch (e) {
       setState(() {
@@ -46,7 +46,6 @@ class _PokemonScreenState extends State<PokemonScreen> {
     }
   }
 
-  // 🔥 NOVO: navegação
   void navegarPokemon(int novoId) {
     if (novoId <= 0) return;
     searchPokemon(novoId.toString());
@@ -138,7 +137,6 @@ class _PokemonScreenState extends State<PokemonScreen> {
 
                     const SizedBox(height: 20),
 
-                    // 🔥 BOTÕES ANTERIOR / PRÓXIMO
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
